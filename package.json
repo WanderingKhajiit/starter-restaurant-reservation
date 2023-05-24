@@ -47,5 +47,10 @@
   },
   "keywords": [],
   "author": "Thinkful, Inc.",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "knex": "^2.4.2",
+    "moment": "^2.29.4",
+    "puppeteer": "^20.3.0"
+  }
 }
