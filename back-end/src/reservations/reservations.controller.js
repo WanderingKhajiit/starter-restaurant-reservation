@@ -1,4 +1,4 @@
-const reservationsService = require("./reservations.service");
+const reservationsService = require("./reservations.service.js");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const hasProperties = require("../errors/hasProperties");
 
