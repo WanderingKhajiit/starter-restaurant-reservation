@@ -6,7 +6,7 @@ const fsPromises = fs.promises;
 const { createReservation } = require("./api");
 const { selectOptionByText } = require("./utils");
 
-const baseURL = process.env.BASE_URL || "http://localhost:3000";
+const baseURL = process.env.BASE_URL || "http://localhost:5001";
 
 const onPageConsole = (msg) =>
   Promise.all(msg.args().map((event) => event.jsonValue())).then((eventJson) =>
