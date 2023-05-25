@@ -14,7 +14,7 @@ const app = express();
 
 app.use(cors(
 origin: "https://reservationlist-ui-ux.onrender.com/",
-credentials: true
+credentials: true,
 ));
 app.use(express.json());
 app.options("*", cors());
