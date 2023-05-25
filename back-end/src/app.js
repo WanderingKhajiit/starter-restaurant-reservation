@@ -12,12 +12,11 @@ const tablesRouter = require("./tables/tables.router");
 
 const app = express();
 
-app.use(cors(
-origin: "https://reservationlist-ui-ux.onrender.com/",
-credentials: true,
-));
+app.use(cors());
 app.use(express.json());
-app.options("*", cors());
+app.options("*", cors(
+origin: "https://reservationlist-ui-ux.onrender.com/",
+credentials: true,));
 
 app.use("/reservations", reservationsRouter);
 app.use("/tables", tablesRouter);
