@@ -4,14 +4,14 @@ const methodNotAllowed = require("../errors/methodNotAllowed");
 
 router
   .route("/")
-  .post(controller.create)
-  .get(controller.list)
+  .post(cors(), controller.create)
+  .get(cors(), controller.list)
   .all(methodNotAllowed);
 
 router
   .route("/:table_id/seat")
-  .put(controller.update)
-  .delete(controller.finish)
+  .put(cors(), controller.update)
+  .delete(cors(), controller.finish)
   .all(methodNotAllowed);
 
 module.exports = router;
