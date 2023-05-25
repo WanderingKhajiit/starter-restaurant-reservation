@@ -13,8 +13,8 @@ const tablesRouter = require("./tables/tables.router");
 const app = express();
 
 app.use(cors(
-origin: "https://reservationlist-ui-ux.onrender.com/"
-homepage: "/dashboard"
+origin: "https://reservationlist-ui-ux.onrender.com/",
+credentials: true
 ));
 app.use(express.json());
 app.options("*", cors());
