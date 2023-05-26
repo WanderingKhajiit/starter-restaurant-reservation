@@ -22,11 +22,6 @@ credentials: true,
 app.use("/reservations", reservationsRouter);
 app.use("/tables", tablesRouter);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
-});
-
-
 app.use(notFound);
 app.use(errorHandler);
 
