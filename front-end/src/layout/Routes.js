@@ -23,27 +23,27 @@ function Routes() {
   const date = query.get("date");
 
   return (
-    <Switch>
+   <Switch>
       <Route exact={true} path="/">
         <Redirect to={"/dashboard"} />
       </Route>
       <Route exact={true} path="/reservations">
         <Redirect to={"/dashboard"} />
       </Route>
-      <Route path="/dashboard">
-        <Dashboard date={date || today()} />
+      <Route path="/dashboard/">
+        <Dashboard date={date ? date : today()} />
       </Route>
       <Route path="/reservations/new">
         <ReservationNew />
+      </Route>
+      <Route path="/tables/new">
+        <TableNew />
       </Route>
       <Route path="/reservations/:reservation_id/seat">
         <ReservationSeat />
       </Route>
       <Route path="/reservations/:reservation_id/edit">
         <ReservationEdit />
-      </Route>
-      <Route path="/tables/new">
-        <TableNew />
       </Route>
       <Route path="/search">
         <Search />
