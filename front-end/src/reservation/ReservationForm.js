@@ -42,10 +42,6 @@ export const ReservationForm = ({
             <PhoneInput
               id="mobile_number"
               name="mobile_number"
-<<<<<<< HEAD
-=======
-              type="tel"
->>>>>>> 80fddda02860029bd234313023bb14531817db9f
               required={true}
               value={reservation.mobile_number}
               maxLength="100"
