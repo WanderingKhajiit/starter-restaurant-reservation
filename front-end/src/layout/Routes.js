@@ -48,9 +48,7 @@ function Routes() {
       <Route path="/search">
         <Search />
       </Route>
-      <Route>
-        <NotFound />
-      </Route>
+     
     </Switch>
   );
 }
