@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import PhoneInput from 'react-phone-number-input'
 
 export const ReservationForm = ({
   reservation,
@@ -38,10 +39,9 @@ export const ReservationForm = ({
           </div>
           <div>
             <label htmlFor="mobile_number">Mobile Number:</label>
-            <input
+            <PhoneInput
               id="mobile_number"
               name="mobile_number"
-              type="number"
               required={true}
               value={reservation.mobile_number}
               maxLength="100"
