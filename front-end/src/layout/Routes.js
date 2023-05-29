@@ -7,7 +7,6 @@ import ReservationSeat from "../reservation/ReservationSeat";
 import ReservationEdit from "../reservation/ReservationEdit";
 import TableNew from "../tables/TableNew";
 import Search from "../search/Search";
-import NotFound from "./NotFound";
 import { today } from "../utils/date-time";
 import useQuery from "../utils/useQuery";
 
@@ -48,11 +47,6 @@ function Routes() {
       <Route path="/search">
         <Search />
       </Route>
-<<<<<<< HEAD
-     
-=======
-      
->>>>>>> 070c39c628991f65091ef6a273efa7543b54307c
     </Switch>
   );
 }
