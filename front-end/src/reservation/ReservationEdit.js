@@ -26,7 +26,10 @@ export const ReservationEdit = () => {
     const abortController = new AbortController();
     setReservationErrors(null);
     readReservation(reservation_id, abortController.signal)
-      .then(setReservation)
+      .then((data) => {
+        setReservation(data)
+        console.log(data)
+      })
       .catch(setReservationErrors);
 
     return () => abortController.abort();
@@ -38,11 +41,13 @@ export const ReservationEdit = () => {
         ...reservation,
         [event.target.name]: Number(event.target.value),
       });
+      
     } else {
       setReservation({
         ...reservation,
         [event.target.name]: event.target.value,
       });
+      
     }
   };
 

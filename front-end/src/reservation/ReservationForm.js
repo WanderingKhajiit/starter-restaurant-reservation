@@ -19,7 +19,6 @@ export const ReservationForm = ({
               id="first_name"
               name="first_name"
               type="text"
-              pattern="[0-9]{10}"
               required={true}
               value={reservation.first_name}
               maxLength="100"
@@ -43,7 +42,8 @@ export const ReservationForm = ({
             <input
               id="mobile_number"
               name="mobile_number"
-              type="number"
+              type="text"
+              pattern="[0-9]{10}"
               required={true}
               value={reservation.mobile_number}
               maxLength="100"
